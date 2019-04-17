@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/Styles.css">
     <title> David Norvald | Junior Developer </title>
+    <style>
+      .blur {-webkit-filter: blur(4px);filter: blur(4px);}
+
+      .card {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+}
+
+
+    </style>
   </head>
   <body>
     
@@ -43,7 +61,7 @@
             </div>
         </nav>
 
-    <!-- End Nav Bar-->
+    <!-- /Nav Bar-->
 
 
 
@@ -60,7 +78,7 @@
             </div>
         </div>
 
-    <!-- End Background -->
+    <!-- /Background -->
 
 
 
@@ -71,7 +89,7 @@
     <div  class="about" id="About" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
             <div class="py-5">
                 <h1 class="text-center">@me</h1>
-                    <p>...</p>
+                    <p class="text-center">...</p>
                     <div class="jumbotron">
                         <h1 class="display-7">Hello! My name is Dave!</h1>
                         <p class="lead">I have always been around computers and technology my whole life. 
@@ -94,7 +112,7 @@
             </div>
     </div>
 
-    <!-- End About -->
+    <!-- /About -->
             
 
 
@@ -111,51 +129,103 @@
             <p>...</p>
             </div>
 
-            
+            <!-- first skill row -->
+
             <div class="card-deck m-5 py-5">
-                <div span class="card border border-dark"></span>
+                <div span class="card border-dark bg-secondary"></span>
                   <img class="card-img-top" src="./Images/Small Basic.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h4 class="card-title">Small Basic</h4>
                     <p class="card-text">I am familiar with:
-                            <ul>
-                                    <li>Syntax</li>
-                                    <li>IntelliSense use</li>
-                                    <li>Programming Concepts</li>
-                                </ul>
+                      <ul>
+                        <li>Syntax</li>
+                        <li>IntelliSense use</li>
+                        <li>Programming Concepts</li>
+                      </ul>
                     </p>
                   </div>
                 </div>
-                <div span class="card border border-dark"></span>
+                <div span class="card border-dark bg-secondary"></span>
                   <img class="card-img-top" src="./Images/GitHub.png" alt="Card image cap">
                   <div class="card-body">
                     <h4 class="card-title">Version Control</h4>
                     <p class="card-text">I am familiar with:
-                            <ul>
-                                    <li>Git</li>
-                                    <li>GitHub</li>
-                                    <li>Visual Studio IDE</li>
-                                </ul>
-                    </p>
+                      <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Visual Studio IDE</li>
+                      </ul>
+                </p>
                   </div>
                 </div>
-                <div span class="card border border-dark"></span>
+                <div span class="card border-dark bg-secondary"></span>
                     <img class="card-img-top" src="./Images/HTML and CSS.jpg" alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">HTML & CSS</h4>
                       <p class="card-text">I am familiar with:
-                          <ul>
-                              <li>HTML5</li>
-                              <li>CSS3</li>
-                              <li>Bootstrap</li>
-                          </ul>
+                        <ul>
+                          <li>HTML5</li>
+                          <li>CSS3</li>
+                          <li>Bootstrap</li>
+                        </ul>
+                      </p>
+                    </div>
+                </div>
+              </div>
+
+              <!-- /first skill row -->
+
+              <!-- second skill row -->
+
+              <div class="card-deck m-5 py-5">
+                  <div span class="card border-dark"></span>
+                    <img class="card-img-top" src="./Images/javascript.png" alt="Card image cap">
+                    <div class="card-body bg-secondary">
+                      <h4 class="card-title">JavaScript</h4>
+                      <p class="card-text ">I am familiar with:
+                        <ul>
+                          <li>JavaScript Syntax</li>
+                          <li>jQuery</li>
+                          <li></li>
+                        </ul>
                       </p>
                     </div>
                   </div>
-              </div>
+                  <div span class="card border-dark bg-secondary"></span>
+                    <img class="card-img-top modal-content blur" id="img01" src="./Images/SQL.jpg" alt="Card image cap">
+                    <div class="center">COMING SOON...</div>
+                    <div class="card-body blur">
+                      <h4 class="card-title">Database & SQL</h4>
+                      <p class="card-text">I am familiar with:
+                        <ul>
+                          <li>Database Fundamentals</li>
+                          <li>Creating Databases</li>
+                          <li>SQL Implimentation</li>
+                        </ul>
+                  </p>
+                    </div>
+                  </div>
+                  <div span class="card border-dark bg-secondary" id="myModal"></span>
+                      <img class="card-img-top modal-content blur" id="img01" src="./Images/VisualStudio.jpg" alt="Card image cap">
+                      <div class="center">COMING SOON...</div>
+                      <div class="card-body blur">
+                        <h4 class="card-title">Visual Studio</h4>
+                        <p class="card-text">I am familiar with:
+                          <ul>
+                            <li>IDE Concepts</li>
+                            <li>Debugging My Own Code</li>
+                            <li>Source Control</li>
+                          </ul>
+                        </p>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- /second skill row -->
         </div>
             
-    <!-- End Skills -->
+
+    <!-- /Skills -->
 
 
 
@@ -169,14 +239,14 @@
             <p>More to come, please be patient. This is still a work in progress...</p>
         </div>
 
-    <!-- Projects -->
+    <!-- /Projects -->
             
 
 
 
 
 
-    <!-- Footer Start -->
+    <!-- Footer -->
 
     <footer class="p-5">
 
@@ -203,12 +273,19 @@
 
     </footer>
 
-    <!-- Footer End -->
+    <!-- /Footer -->
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  
+    <script>
+    
+
+    
+    </script>
+  
   </body>
 </html>
