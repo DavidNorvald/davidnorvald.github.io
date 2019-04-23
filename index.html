@@ -6,24 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/Styles.CSS">
+  
+
     <title> David Norvald | Junior Developer </title>
     <style>
-      .blur {-webkit-filter: blur(4px);filter: blur(4px);}
 
-      .card {
-  position: relative;
-}
+    /* Blur effect styling for cards yet to be filled out
 
-.center {
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 35px;
-}
+    .blur {-webkit-filter: blur(4px);filter: blur(4px);}
+
+    .card {
+      position: relative;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 35px;
+    }
+
+    */
+
+    .modal-header {
+    background-color: #5192c7;
+    font-size: 30px;
+    
+  }
+
+
 
 
     </style>
@@ -132,21 +148,34 @@
             <!-- first skill row -->
 
             <div class="card-deck m-5 py-5">
-                <div span class="card border-dark bg-secondary"></span>
-                  <img class="card-img-top" src="./Images/Small Basic.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h4 class="card-title">Small Basic</h4>
-                    <p class="card-text">I am familiar with:
-                      <ul>
-                        <li>Syntax</li>
-                        <li>IntelliSense use</li>
-                        <li>Programming Concepts</li>
-                      </ul>
-                    </p>
-                  </div>
+              <div span class="card border-dark bg-secondary"></span>
+                <img class="card-img-top" src="./Images/html css.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">HTML & CSS</h4>
+                  <p class="card-text">I am familiar with:
+                    <ul>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>Bootstrap</li>
+                    </ul>
+                  </p>
                 </div>
+              </div>
+              <div span class="card border-dark"></span>
+                <img class="card-img-top" src="./Images/javascript.jpg" alt="Card image cap">
+                <div class="card-body bg-secondary">
+                  <h4 class="card-title">JavaScript</h4>
+                  <p class="card-text ">I am familiar with:
+                    <ul>
+                      <li>JavaScript Syntax</li>
+                      <li>jQuery</li>
+                      <li>React</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
                 <div span class="card border-dark bg-secondary"></span>
-                  <img class="card-img-top" src="./Images/GitHub.png" alt="Card image cap">
+                  <img class="card-img-top" src="./Images/github.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h4 class="card-title">Version Control</h4>
                     <p class="card-text">I am familiar with:
@@ -155,21 +184,8 @@
                         <li>GitHub</li>
                         <li>Visual Studio IDE</li>
                       </ul>
-                </p>
+                    </p>
                   </div>
-                </div>
-                <div span class="card border-dark bg-secondary"></span>
-                    <img class="card-img-top" src="./Images/HTML and CSS.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h4 class="card-title">HTML & CSS</h4>
-                      <p class="card-text">I am familiar with:
-                        <ul>
-                          <li>HTML5</li>
-                          <li>CSS3</li>
-                          <li>Bootstrap</li>
-                        </ul>
-                      </p>
-                    </div>
                 </div>
               </div>
 
@@ -177,7 +193,7 @@
 
               <!-- second skill row -->
 
-              <div class="card-deck m-5 py-5">
+        <!--    <div class="card-deck m-5 py-5">
                   <div span class="card border-dark"></span>
                     <img class="card-img-top" src="./Images/javascript.png" alt="Card image cap">
                     <div class="card-body bg-secondary">
@@ -220,7 +236,7 @@
                       </div>
                   </div>
                 </div>
-
+              -->
                 <!-- /second skill row -->
         </div>
             
@@ -236,8 +252,74 @@
 
         <div class="text-center py-5" id="Projects">
             <h1>^Projects</h1>
-            <p>More to come, please be patient. This is still a work in progress...</p>
-        </div>
+            <p>Over the course of the JavaScript program, I have worked on various projects. 
+              An example below is a simple calculator and a countdown timer: </p>
+        
+
+            <!-- Calculator Modal Button-->
+            <button type="button" class="btn btn-info btn-lg" id="myBtn"> Calculator</button>
+
+              <!-- Calculator Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h3 class="modal-title">Calculator</h3>
+                        </div>
+
+                        <div class="frame1">
+
+                          <h1 id="total">0.00</h1>
+                          <br>
+                          Number 1: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="txt1" size="4">
+                          <br><br>
+                          Number 2: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="txt2" size="4">
+                          <br><br><br>
+                          <input type="radio" name="calc" value="*" checked> *</input>&nbsp&nbsp
+                          <input type="radio" name="calc" value="/"> /</input>&nbsp&nbsp
+                          <input type="radio" name="calc" value="+"> +</input>&nbsp&nbsp
+                          <input type="radio" name="calc" value="-"> -</input>
+                          <br><br>
+                          <button type="button" onClick="calc() ;">Calculate</button>
+                          <button type="button" onClick="Clear() ;">Clear</button>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+            
+        
+            <!-- Countdown Timer Modal button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2"> Countdown Timer</button>
+
+            <!-- Countdown Timer Modal -->
+            <div class="modal fade" id="myModal2" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Countdown Timer Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title">Countdown Timer</h3>
+                  </div>
+                  <div class="modal-body">
+                      <p>How many seconds would you like to set your alarm for?</p>
+                      <input id="seconds" value="" />
+                      <button onclick="countdown()">Click here</button>
+                      <p id="timer"></p>
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
 
     <!-- /Projects -->
             
@@ -248,28 +330,37 @@
 
     <!-- Footer -->
 
-    <footer class="p-5">
+    <footer class="p-5" id="footer_style">
 
-        <div class="row" id="GitHub">
+
+      <div class="footer_title">
+        <h1 class="far fa-hand-point-right text-info"> Connect with me!</h1>
+      </div>
+
+        <div class="row">
             <div class="col-sm-6">
-              <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+              <div class="card text-white bg-info mb-3" style="max-width: 18rem;" id="GitHub">
                 <div class="card-body">
                   <h5 class="card-title">#GitHub</h5>
                   <p class="card-text">Interested in checking out my GitHub profile? Just tap the link below!</p>
-                  <a href="https://github.com/DavidNorvald" class="btn btn-primary">GitHub</a>
+                  <a href="https://github.com/DavidNorvald" class="btn btn-primary fab fa-github"> GitHub</a>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6" id="LinkedIn">
-              <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="col-sm-6">
+              <div class="card text-white bg-info mb-3" style="max-width: 18rem;" id="LinkedIn">
                 <div class="card-body">
-                  <h5 class="card-title">#LinkedIn</h5>
+                  <h5 class="card-title ">#LinkedIn</h5>
                   <p class="card-text">Would you like to connect with me on LinkedIn? Just follow that link to LinkedIn!</p>
-                  <a href="https://www.linkedin.com/in/david-norvald-36b265182/" class="btn btn-primary">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/david-norvald-36b265182/" class="btn btn-primary fab fa-linkedin"> LinkedIn</a>
                 </div>
               </div>
             </div>
         </div>
+
+        
+
+        
 
     </footer>
 
@@ -279,13 +370,77 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  
+   
+    
+    <!-- Modal Script -->
     <script>
-    
 
-    
+      $(document).ready(function(){
+        $("#myBtn").click(function(){
+          $("#myModal").modal();
+        });
+      });
+
     </script>
-  
+
+<script>
+
+    $(document).ready(function(){
+      $("#myBtn2").click(function(){
+        $("#myModal2").modal();
+      });
+    });
+
+  </script>
+
+
+    <!-- Calculator Script -->
+    <script>
+
+        var txt1 = document.getElementById("txt1");
+        var txt2 = document.getElementById("txt2");
+        var total = document.getElementById("total");
+
+        function calc() {
+            var result = document.querySelector('input[name="calc"]:checked').value; // checked?
+            var num1 = parseInt(txt1.value); console.log(typeof num1); console.log(isNaN(num1));
+            var num2 = parseInt(txt2.value); console.log(typeof num2); console.log(isNaN(num2));
+            if(result == "*") {
+                total.innerHTML = (num1 * num2).toFixed(2);
+            } else if(result == "/") {
+                total.innerHTML = (num1 / num2).toFixed(2); // precide to the tenths place
+            } else if(result == "+") {
+                total.innerHTML = (num1 + num2).toFixed(2);
+            } else if(result == "-") {
+                total.innerHTML = (num1 - num2).toFixed(2);
+            };
+        };
+
+        function Clear() { //  "clear()" cannot be lowercase! as that is a built-in function for JS, easier to rename to "erase()"" for it to work
+            txt1.value = ""; txt2.value = ""; total.innerHTML = "0.00"; // clears fields
+        }
+
+    </script>
+      
+
+      <!-- Countdown Script -->
+      <script>
+          function countdown() {
+            var seconds = document.getElementById("seconds").value; 
+            function tick() {
+                  seconds = seconds - 1;
+              timer.innerHTML = seconds;
+              setTimeout(tick, 1000);
+                  if(seconds == -1){
+                      alert("Time's up!");
+                  else(seconds == -2) {
+                    
+                  }
+                  }
+                  }
+              tick();
+          }
+      </script>
+
   </body>
 </html>

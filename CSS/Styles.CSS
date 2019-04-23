@@ -48,6 +48,37 @@ html {
 .card-img-top {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    display: block;
 }
+
+#footer_style{
+    background: url(../Images/keyboard.png) no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	display: block;
+	height: 100%;
+    color: #fff;
+    
+}
+
+.footer_title {
+    margin: 0 0 3% 0 ;
+    text-align: center;
+}
+
+#GitHub {
+    border: 2px solid #fff;
+}
+
+#LinkedIn {
+    border: 2px solid #fff;
+}
+
+#Projects {
+    margin: 5%;
+}
+
 
