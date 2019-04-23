@@ -360,7 +360,6 @@
 
         
 
-        
 
     </footer>
 
@@ -416,7 +415,7 @@
             };
         };
 
-        function Clear() { //  "clear()" cannot be lowercase! as that is a built-in function for JS, easier to rename to "erase()"" for it to work
+        function Clear() { //  "clear()" cannot be lowercase! as that is a built-in function for JS, easier to rename to "erase()"" for less confusion.
             txt1.value = ""; txt2.value = ""; total.innerHTML = "0.00"; // clears fields
         }
 
@@ -433,9 +432,6 @@
               setTimeout(tick, 1000);
                   if(seconds == -1){
                       alert("Time's up!");
-                  else(seconds == -2) {
-                    
-                  }
                   }
                   }
               tick();
